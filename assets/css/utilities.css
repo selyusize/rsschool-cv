@@ -1,0 +1,62 @@
+/* Utilities: small helpers used often across components */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.gap-1 {
+	gap: 0.5rem;
+}
+.gap-2 {
+	gap: 1rem;
+}
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.9rem 1.5rem;
+	border-radius: 6px;
+	border: 1px solid var(--border);
+	background: transparent;
+	color: var(--text);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.btn:hover {
+	border-color: var(--secondary-accent);
+	box-shadow: var(--glow-hover);
+	color: var(--secondary-accent);
+}
+
+.divider {
+	margin: 1.4rem 0;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.divider::before,
+.divider::after {
+	content: '';
+	flex: 1;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+	padding: 0 0.75rem;
+	font-size: 0.85rem;
+	color: var(--text-muted, #aaa);
+}

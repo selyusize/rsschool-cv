@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="CV of Yaroslav Selyutin - Aspiring Frontend Developer and Tester"
+			data-translate="metaDescription"
+		/>
+		<meta
+			name="keywords"
+			content="frontend developer, tester, web development, CV, Yaroslav Selyutin"
+			data-translate="metaKeywords"
+		/>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<title data-translate="title">Yaroslav Selyutin - CV</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<a href="/">selyusize</a>
+			</div>
+			<nav>
+				<ul class="navigation-top">
+					<li>
+						<a href="#">Обо мне</a>
+					</li>
+					<li>
+						<a href="#">Проекты</a>
+					</li>
+					<li>
+						<a href="#">Обучение</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container">
+			<nav
+				class="breadcrumbs"
+				aria-label="Breadcrumb"
+				itemscope
+				itemtype="https://schema.org/BreadcrumbList"
+				data-static="true"
+			>
+				<ol class="breadcrumbs-list">
+					<li
+						itemprop="itemListElement"
+						itemscope
+						itemtype="https://schema.org/ListItem"
+					>
+						<a itemprop="item" href="/" class="crumb"
+							><span itemprop="name">Главная</span></a
+						>
+						<meta itemprop="position" content="1" />
+					</li>
+					<li class="crumb-sep" aria-hidden="true">/</li>
+					<li
+						itemprop="itemListElement"
+						itemscope
+						itemtype="https://schema.org/ListItem"
+					>
+						<a itemprop="item" href="/blog.html" class="crumb"
+							><span itemprop="name">Блог</span></a
+						>
+						<meta itemprop="position" content="2" />
+					</li>
+					<li class="crumb-sep" aria-hidden="true">/</li>
+					<li
+						itemprop="itemListElement"
+						itemscope
+						itemtype="https://schema.org/ListItem"
+						aria-current="page"
+					>
+						<span class="crumb current" itemprop="name"
+							>Understanding Closures in JavaScript</span
+						>
+						<meta itemprop="position" content="3" />
+					</li>
+				</ol>
+			</nav>
+			<main id="article">
+				<article class="article-card">
+					<section class="article-head">
+						<time class="meta-date" datetime="2025-10-01">October 1, 2025</time>
+						<h1 class="article-title">Заголовок статьи — из Markdown</h1>
+						<p class="article-sub">Краткое описание / лид — 1–2 строки.</p>
+					</section>
+
+					<div class="article-content">
+						<!-- ВСТАВЛЯЙ СЮДА HTML, СГЕНЕРИРОВАННЫЙ ИЗ MARKDOWN -->
+						<!-- Пример: -->
+						<h2>Раздел</h2>
+						<h3>1</h3>
+						<h4>2</h4>
+						<h5>4</h5>
+						<h6>6</h6>
+						<p>Параграф текста...</p>
+						<figure class="code-zero">
+							<pre><code class="language-js">
+// Simple To-Do List App
+function createTodoApp() {
+  const todos = [];
+
+  function addTodo(task) {
+    todos.push({ task: task, completed: false });
+    console.log(`Added: ${task}`);
+  }
+
+  function completeTodo(index) {
+    if (todos[index]) {
+      todos[index].completed = true;
+      console.log(`Completed: ${todos[index].task}`);
+    }
+  }
+
+  return { addTodo, completeTodo };
+}
+
+const todoApp = createTodoApp();
+todoApp.addTodo("Learn JavaScript"); // Added: Learn JavaScript
+todoApp.completeTodo(0);             // Completed: Learn JavaScript
+  </code></pre>
+							<figcaption class="code-caption">
+								Пример: простой To-Do лист на JavaScript
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>1</li>
+							<li>1</li>
+							<li>1</li>
+							<li>1</li>
+						</ul>
+					</div>
+
+					<section class="article-foot">
+						<div class="author-compact">
+							<img
+								class="author-avatar"
+								src="/assets/images/avatar.jpg"
+								alt="Ярослав"
+							/>
+							<div>
+								<div class="author-name">Ярослав Селютин</div>
+								<div class="author-role">Frontend developer</div>
+							</div>
+						</div>
+
+						<div class="subscribe-line">
+							<form id="minimalSubscribe" class="subscribe-form">
+								<input
+									type="email"
+									name="email"
+									placeholder="Email для подписки"
+									required
+								/>
+								<button class="btn-sub" type="submit">Subscribe</button>
+							</form>
+						</div>
+					</section>
+				</article>
+			</main>
+
+			<footer>
+				<div class="footer-links">
+					<a href="https://github.com/9ickpic">GitHub</a>
+					<a href="https://t.me/ickpic">Telegram</a>
+					<a href="mailto:moontesearch@gmail.com">Email</a>
+					<a href="https://vk.com/9ickpic">VK</a>
+				</div>
+				<div class="footer-copyright">
+					<p data-translate="footerText">
+						© 2025 Yaroslav Selyutin | Frontend Developer
+					</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+/* Code / showcase blocks */
+.code-container {
+	border: 1px solid var(--border);
+	padding: 2rem;
+	position: relative;
+	box-shadow: var(--glow);
+	transition: all 0.3s ease;
+}
+.code-container:hover {
+	box-shadow: var(--glow-hover);
+	border-color: var(--secondary-accent);
+}
+.code-container::before {
+	content: '';
+	position: absolute;
+	width: 10%;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	transform: translateX(2rem);
+	background: linear-gradient(90deg, var(--accent), var(--secondary-accent));
+}
+.code-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+.code-header h2 {
+	color: var(--accent);
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+.code-window {
+	background: var(--bg);
+	border-radius: 4px;
+	padding: 1.5rem;
+	position: relative;
+	overflow: hidden;
+}
+.code-window::after {
+	content: '● ● ●';
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	color: var(--muted);
+	font-size: 0.8rem;
+	line-height: 1rem;
+}
+pre {
+	margin: 0;
+	padding-top: 1rem;
+	overflow-x: auto;
+}
+code {
+	color: var(--text);
+	font-family: var(--font-mono);
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
+.code-comment {
+	color: var(--muted);
+}
+.code-keyword {
+	color: var(--accent);
+}
+.code-string {
+	color: var(--secondary-accent);
+}

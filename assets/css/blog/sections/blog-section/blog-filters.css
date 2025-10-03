@@ -1,0 +1,36 @@
+.blog-filters {
+	display: flex;
+	justify-content: center;
+	gap: 0.8rem;
+	margin-bottom: 2.5rem;
+	flex-wrap: wrap;
+}
+
+.featured__content {
+	display: flex;
+	gap: 0.5rem;
+	padding: 1rem;
+}
+
+.filter-btn {
+	padding: 0.6rem 1.2rem;
+	background: none;
+	color: var(--text);
+	border: 1px solid rgba(255, 255, 255, 0);
+	border-radius: 0.6rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-family: inherit;
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.filter-btn:hover {
+	border-color: var(--accent);
+}
+
+.filter-btn.active {
+	border-color: var(--accent);
+	color: var(--accent);
+	box-shadow: var(--glow);
+}

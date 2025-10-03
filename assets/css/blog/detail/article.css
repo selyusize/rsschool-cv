@@ -1,0 +1,246 @@
+/* Minimal article styles — single column, markdown-friendly */
+/* Uses site's CSS variables: --text, --muted, --accent, --bg, --text-primary, etc. */
+
+.article-card {
+	background: transparent; /* keep page background */
+	border-radius: 0.6rem;
+	padding: 0; /* header/content/footer handle spacing */
+}
+
+/* Header (meta, title, lead) */
+section.article-head {
+	background: nnoe;
+	margin-bottom: 2rem;
+}
+
+.meta-date {
+	display: inline-block;
+	color: var(--muted);
+	font-size: 0.9rem;
+	margin-bottom: 0.45rem;
+}
+.article-title {
+	margin: 0.2rem 0 0.45rem;
+	color: var(--text);
+	background: none;
+}
+
+.article-head {
+	background: none;
+}
+.article-sub {
+	color: var(--muted);
+	margin: 0 0 1.1rem;
+	max-width: 68ch;
+	font-size: 1rem;
+}
+
+/* Content (the HTML produced from Markdown goes here) */
+.article-content {
+	color: var(--text);
+	line-height: 1.68;
+	font-size: 1rem;
+	word-wrap: break-word;
+}
+
+.article-content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0 2rem;
+}
+
+.article-content p {
+	padding: 0 1rem;
+}
+
+/* Paragraphs, lists */
+.article-content p,
+.article-content ul,
+.article-content ol {
+	margin: 0 0 0.95rem;
+	color: var(--text);
+	font-size: 1.1rem;
+}
+.article-content ul,
+.article-content ol {
+	padding-left: 1.15rem;
+}
+
+/* Links and inline code */
+.article-content a {
+	color: var(--accent);
+	text-decoration: none;
+	border-bottom: 1px dashed rgba(255, 255, 255, 0.04);
+}
+.article-content a:hover {
+	text-decoration: underline;
+}
+
+.article-content code {
+	background: rgba(255, 255, 255, 0.02);
+	padding: 0.08rem 0.28rem;
+	border-radius: 6px;
+	font-size: 0.92em;
+	color: #e6edf3;
+}
+
+/* Preformatted code blocks */
+.article-content pre {
+	background: rgba(3, 6, 10, 0.55);
+	border: 1px solid rgba(255, 255, 255, 0.03);
+	padding: 0.9rem;
+	border-radius: 0.6rem;
+	overflow: auto;
+	margin: 0 0 1rem;
+}
+.article-content pre code {
+	display: block;
+	white-space: pre;
+	font-size: 0.92rem;
+	line-height: 1.45;
+	background: none;
+}
+
+/* Blockquote */
+.article-content blockquote {
+	margin: 0 0 1rem;
+	padding: 0.6rem 1rem;
+	border-left: 3px solid rgba(255, 255, 255, 0.04);
+	color: var(--muted);
+	background: rgba(255, 255, 255, 0.01);
+	border-radius: 6px;
+}
+
+/* Images and figures */
+.article-content img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 6px;
+	margin: 0.6rem 0;
+}
+.article-content figure {
+	margin: 0 0 1rem;
+}
+.article-content figcaption {
+	font-size: 0.88rem;
+	color: var(--muted);
+	margin-top: 0.35rem;
+}
+
+/* Tables — simple and readable */
+.article-content table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 0 1rem;
+	font-size: 0.95rem;
+}
+.article-content th,
+.article-content td {
+	border: 1px solid rgba(255, 255, 255, 0.04);
+	padding: 0.5rem 0.7rem;
+	text-align: left;
+}
+.article-content thead th {
+	background: rgba(255, 255, 255, 0.02);
+	color: var(--text);
+}
+
+/* Horizontal rule */
+.article-content hr {
+	height: 1px;
+	background: rgba(255, 255, 255, 0.04);
+	border: none;
+	margin: 1.25rem 0;
+	opacity: 0.9;
+}
+
+/* Footnotes / small text */
+.article-content small,
+.article-content .footnote {
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+/* Author & subscribe in footer */
+.article-foot {
+	margin-top: 1.5rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-top: 1px solid rgba(255, 255, 255, 0.03);
+	padding: 1rem 2rem;
+}
+.author-compact {
+	display: flex;
+	gap: 0.75rem;
+	align-items: center;
+}
+.author-avatar {
+	width: 44px;
+	height: 44px;
+	border-radius: 8px;
+	object-fit: cover;
+	border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.author-name {
+	font-weight: 700;
+	color: var(--text);
+}
+.author-role {
+	color: var(--muted);
+	font-size: 0.92rem;
+}
+
+/* Subscribe */
+.subscribe-form {
+	display: flex;
+	gap: 0.6rem;
+	align-items: center;
+}
+.subscribe-form input {
+	padding: 0.55rem 0.8rem;
+	border-radius: 0.6rem;
+	border: 1px solid rgba(255, 255, 255, 0.04);
+	background: rgba(255, 255, 255, 0.02);
+	color: var(--text);
+}
+.btn-sub {
+	padding: 0.55rem 0.85rem;
+	border-radius: 0.6rem;
+	background: var(--accent);
+	color: var(--bg);
+	border: none;
+	font-weight: 700;
+}
+
+/* Accessibility & readable focus */
+.article-content a:focus,
+.support-btn:focus,
+.btn-sub:focus {
+	outline: 2px solid rgba(130, 170, 255, 0.18);
+	outline-offset: 2px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 720px) {
+	.minimal-article {
+		padding: 1.25rem;
+	}
+	.article-foot {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.9rem;
+	}
+	.subscribe-form {
+		width: 100%;
+	}
+	.subscribe-form input {
+		flex: 1 1 auto;
+	}
+}

@@ -1,0 +1,99 @@
+.breadcrumbs {
+	font-family: inherit; /* наследуем общий стек (у тебя var(--font-mono) на странице) */
+	font-size: 0.92rem; /* чуть меньше основного текста */
+	color: var(--muted, rgba(255, 255, 255, 0.6));
+	margin: 0 0 1rem;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+}
+
+.breadcrumbs-list {
+	display: flex;
+	align-items: center;
+	gap: 0.45rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+	/* если контейнер узкий — можно скроллить */
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+}
+
+/* отдельная крошка (ссылка) */
+.crumb {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	padding: 0.18rem 0.45rem;
+	border-radius: 6px;
+	text-decoration: none;
+	color: var(--muted, rgba(255, 255, 255, 0.6));
+	transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
+	line-height: 1;
+}
+
+/* hover / focus — лёгкий фон и акцент */
+.crumb:hover,
+.crumb:focus {
+	background: rgba(255, 255, 255, 0.02);
+	color: var(--text-primary);
+	transform: translateY(-1px);
+	outline: none;
+}
+
+/* текущая страница — не ссылка, выделяется */
+.crumb.current {
+	color: var(--text-primary);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	background: transparent;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+
+/* разделитель — тонкий и ненавязчивый */
+.crumb-sep {
+	color: rgba(255, 255, 255, 0.06);
+	padding: 0 0.15rem;
+	user-select: none;
+	font-weight: 400;
+}
+
+/* Укорачиваем длинные крошки (ellipsis) */
+.crumb span,
+.crumb.current {
+	display: inline-block;
+	max-width: 18ch; /* ограничиваем по символам, подойдет для заголовков */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+}
+
+/* Для мобильных — слегка увеличим доступную область и включим больше скролла */
+@media (max-width: 520px) {
+	.breadcrumbs {
+		font-size: 0.88rem;
+		margin-bottom: 0.75rem;
+	}
+	.breadcrumbs-list {
+		gap: 0.35rem;
+		padding-bottom: 0.25rem;
+	}
+	.crumb {
+		padding: 0.22rem 0.5rem;
+		border-radius: 8px;
+	}
+}
+
+/* Optional: subtle accent pill for very small "home" item (if you like) */
+.breadcrumbs .home-pill {
+	padding: 0.08rem 0.35rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.02);
+	color: var(--muted);
+	font-weight: 600;
+	font-size: 0.85rem;
+}

@@ -1,0 +1,119 @@
+/* Reusable keyframes and animation utilities */
+@keyframes pulse {
+	0%,
+	100% {
+		transform: translateY(-50%) scale(1);
+		opacity: 0.5;
+	}
+	50% {
+		transform: translateY(-50%) scale(1.2);
+		opacity: 0.8;
+	}
+}
+@keyframes blink {
+	0%,
+	50% {
+		background: var(--accent);
+		box-shadow: var(--glow);
+	}
+	51%,
+	100% {
+		background: var(--secondary-accent);
+		box-shadow: var(--glow-hover);
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes flicker-btn {
+	0% {
+		border-color: rgba(255, 0, 255, 0);
+		box-shadow: none;
+	}
+
+	10% {
+		border-color: rgba(255, 0, 255, 0.3);
+		box-shadow: 0 0 3px rgba(255, 0, 255, 0.1);
+	}
+
+	20% {
+		border-color: rgba(255, 0, 255, 0.6);
+		box-shadow: 0 0 6px rgba(255, 0, 255, 0.3);
+	}
+
+	25% {
+		border-color: rgba(255, 0, 255, 0.1);
+		box-shadow: none;
+	}
+
+	27% {
+		border-color: var(--secondary-accent);
+		box-shadow: var(--glow-hover-cta), inset var(--glow-hover-cta);
+	}
+
+	35%,
+	100% {
+		border-color: var(--secondary-accent);
+		box-shadow: var(--glow-hover-cta), inset var(--glow-hover-cta);
+	}
+}
+
+@keyframes flicker-shadow {
+	0% {
+		opacity: 0.1;
+	}
+
+	10% {
+		opacity: 0.25;
+	}
+
+	20% {
+		opacity: 0.4;
+	}
+
+	25% {
+		opacity: 0.05;
+	}
+
+	27% {
+		opacity: 0.4;
+	}
+
+	35%,
+	100% {
+		opacity: 1;
+	}
+}
+
+.anim-fade {
+	animation: fadeIn 0.6s ease-out both;
+}
+.anim-fade-up {
+	animation: fadeInUp 0.6s ease-out both;
+}
+
+@keyframes hover-card-projects {
+	0% {
+		right: 0;
+	}
+	100% {
+		right: 82%;
+	}
+}

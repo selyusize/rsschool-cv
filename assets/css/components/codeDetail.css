@@ -1,0 +1,37 @@
+/* Zero-mode code block (минимализм VS Code) */
+.code-zero {
+	margin: 1.5rem 0;
+}
+
+.code-zero pre {
+	background: var(--bg, #0d1117);
+	color: var(--text, #e6edf3);
+	font-family: var(
+		--font-mono,
+		ui-monospace,
+		SFMono-Regular,
+		Menlo,
+		Monaco,
+		'JetBrains Mono',
+		monospace
+	);
+	font-size: 0.95rem;
+	line-height: 1.6;
+	padding: 1.2rem 1rem;
+	border-radius: 0.6rem;
+	overflow-x: auto;
+	margin: 0;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.code-zero code {
+	display: block;
+	white-space: pre;
+}
+
+.code-zero .code-caption {
+	margin-top: 0.5rem;
+	font-size: 0.85rem;
+	color: var(--muted, #8b949e);
+	text-align: right;
+}

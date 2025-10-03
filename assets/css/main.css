@@ -1,0 +1,22 @@
+/* Main entry — imports modular parts */
+@import url('../fonts/placeholder.css'); /* optional local fallback; keep external import in base.css if needed */
+@import 'variables.css';
+@import 'base.css';
+@import 'layout.css';
+@import 'components/contact-cta.css';
+@import 'components/langswitcher.css';
+@import 'components/navigation-top.css';
+@import 'components/footer.css';
+@import 'components/header.css';
+@import 'components/header-main.css';
+@import 'components/sections.css';
+@import 'components/contact.css';
+@import 'components/code.css';
+@import 'components/contact-form.css';
+@import 'components/breadcrumbs.css';
+@import 'components/codeDetail.css';
+@import 'blog/index.css';
+@import 'headers.css';
+@import 'utilities.css';
+@import 'animations.css';
+@import 'responsive.css';

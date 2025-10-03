@@ -1,0 +1,5 @@
+.navigation-top {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}

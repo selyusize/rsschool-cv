@@ -1,0 +1,121 @@
+/* Generic sections and project cards */
+.section,
+.about-section {
+	grid-column: span 12;
+	padding: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+section {
+	padding: 2rem;
+}
+
+.about-skills {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.skill-item {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+.skill-name {
+	color: var(--text);
+	font-size: 0.9rem;
+	min-width: 80px;
+}
+.skill-bar {
+	display: flex;
+	gap: 2px;
+	flex: 1;
+}
+.skill-block {
+	width: 12px;
+	height: 12px;
+	background: var(--border);
+	border-radius: 1px;
+	transition: all 0.3s ease;
+}
+.skill-block.active {
+	background: var(--accent);
+	box-shadow: var(--glow);
+}
+.skill-block.active.blink {
+	animation: blink 1.5s infinite;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1rem;
+}
+
+.project-card .project-meta {
+	transition: color 0.3s ease 2.5s;
+}
+.project-card:hover .project-meta {
+	color: var(--secondary-accent);
+}
+
+.project-card {
+	background: var(--bg);
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-sm);
+	transition: box-shadow 0.5s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.project-card::after {
+	content: '';
+	position: absolute;
+	width: 10%;
+	bottom: 0;
+	right: 0;
+	height: 2px;
+	background: var(--secondary-accent);
+	transform: translateX(50%);
+	transition: all 2.5s ease;
+}
+
+.project-card:hover::after {
+	right: 82%;
+	animation: hover-card-projects 2.5s ease;
+}
+
+.project-card:hover {
+	transition: box-shadow 0.3s ease 2.5s;
+	box-shadow: var(--glow-hover);
+}
+
+.project-card h3 {
+	font-size: 1.2rem;
+	color: var(--text);
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	text-shadow: var(--glow);
+}
+.project-card .project-meta {
+	color: var(--accent);
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+.project-card p {
+	color: var(--muted);
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+.project-card a {
+	color: var(--accent);
+	font-size: 0.9rem;
+	transition: color 0.3s ease;
+}
+.project-card a:hover {
+	color: var(--secondary-accent);
+	text-shadow: var(--glow-hover);
+}

@@ -1,0 +1,36 @@
+footer {
+	grid-column: span 12;
+	text-align: center;
+	padding: 2rem;
+	border-top: 1px solid var(--border);
+	margin-top: 2rem;
+	padding-bottom: 0;
+}
+
+.footer-links {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+
+.footer-links a {
+	color: var(--muted);
+	text-decoration: none;
+	font-size: 0.9rem;
+	transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+	color: var(--secondary-accent);
+	text-shadow: var(--glow-hover);
+}
+
+.footer-copyright {
+	color: var(--muted);
+	font-size: 0.8rem;
+}
+
+.footer-copyright a {
+	margin-top: 1rem;
+}

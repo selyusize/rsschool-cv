@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Blog of Yaroslav Selyutin - Thoughts on Frontend Development and Web Technologies"
+		/>
+		<meta
+			name="keywords"
+			content="frontend blog, web development, javascript, coding, Yaroslav Selyutin"
+		/>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<title>Blog - Yaroslav Selyutin</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<a href="/">selyusize</a>
+			</div>
+			<nav>
+				<ul class="navigation-top">
+					<li>
+						<a href="/">Обо мне</a>
+					</li>
+					<li>
+						<a href="#">Проекты</a>
+					</li>
+					<li>
+						<a href="./blog.html">Блог</a>
+					</li>
+					<li>
+						<a href="./contacts.html">Связь со мной</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container">
+			<main class="series-page">
+				<header class="series-hero">
+					<h1 class="series-title">Series — Серии статей</h1>
+					<p class="series-sub">
+						Коллекции связанных материалов: шаг за шагом, с прогрессом и
+						заметками. Добавляй серии через Markdown / frontmatter.
+					</p>
+				</header>
+
+				<section class="series-list" id="seriesList">
+					<!-- Пример одной серии (копируй/шаблонизируй для остальных) -->
+					<article class="series-card" data-completed="3" data-total="5">
+						<div class="series-head">
+							<div>
+								<h2 class="series-name">Modern JavaScript Deep Dive</h2>
+								<div class="series-meta">
+									<span class="muted">Автор: Ярослав</span> ·
+									<span class="muted">5 articles</span>
+								</div>
+							</div>
+
+							<div class="series-progress-compact" aria-hidden="true">
+								<div class="progress-text">
+									<strong>3</strong>/<span>5</span>
+								</div>
+							</div>
+						</div>
+
+						<p class="series-desc">
+							Практическая серия по современному JavaScript — от основ до
+							продвинутых шаблонов и оптимизации.
+						</p>
+
+						<div class="series-progress">
+							<div class="progress-bar" aria-hidden="true">
+								<div class="progress-fill" style="width: 0%"></div>
+							</div>
+							<div class="progress-info muted">3 of 5 completed</div>
+						</div>
+
+						<button
+							class="series-toggle"
+							aria-expanded="false"
+							aria-controls="episodes-1"
+						>
+							Показать эпизоды
+						</button>
+
+						<ol class="episodes" id="episodes-1" hidden>
+							<li class="episode">
+								<a href="/blog/series/js/part-1.html"
+									>Part 1 — Intro to modern JS</a
+								>
+								<span class="muted">• 10 min</span>
+							</li>
+							<li class="episode">
+								<a href="/blog/series/js/part-2.html"
+									>Part 2 — ES modules & bundling</a
+								>
+								<span class="muted">• 12 min</span>
+							</li>
+							<li class="episode">
+								<a href="/blog/series/js/part-3.html"
+									>Part 3 — Closures & patterns</a
+								>
+								<span class="muted">• 8 min</span>
+							</li>
+							<li class="episode locked">
+								<span>Part 4 — Performance (locked)</span>
+							</li>
+							<li class="episode locked">
+								<span>Part 5 — Testing (locked)</span>
+							</li>
+						</ol>
+					</article>
+
+					<!-- Другие серии — аналогично -->
+				</section>
+			</main>
+			<footer>
+				<div class="footer-links">
+					<a href="https://github.com/9ickpic">GitHub</a>
+					<a href="https://t.me/ickpic">Telegram</a>
+					<a href="mailto:moontesearch@gmail.com">Email</a>
+					<a href="https://vk.com/9ickpic">VK</a>
+				</div>
+				<div class="footer-copyright">
+					<p data-translate="footerText">
+						© 2025 Yaroslav Selyutin | Frontend Developer
+					</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

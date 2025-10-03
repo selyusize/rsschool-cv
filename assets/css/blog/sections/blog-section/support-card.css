@@ -1,0 +1,84 @@
+/* Контейнер поддержки внутри featured */
+.blog-post .support-block {
+	margin-top: 1.25rem;
+	padding: 1.5rem;
+	border-radius: 0.7rem;
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.02),
+		rgba(255, 255, 255, 0.01)
+	);
+	border: 1px solid rgba(255, 255, 255, 0.03);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: stretch;
+}
+
+/* Если карточка featured — немного выделим support */
+.blog-post.featured .support-block {
+	background: rgba(13, 17, 23, 0.48);
+	border-color: rgba(255, 255, 255, 0.04);
+	box-shadow: none;
+}
+
+/* Meta/label внутри блока поддержки (маленькая строка) */
+.support-meta {
+	display: flex;
+	gap: 0.6rem;
+	align-items: center;
+	font-size: 0.78rem;
+	color: var(--muted);
+}
+
+.support-badge {
+	background: rgba(255, 255, 255, 0.03);
+	color: var(--muted);
+	padding: 0.18rem 0.42rem;
+	border-radius: 0.36rem;
+	font-weight: 700;
+	font-size: 0.72rem;
+	border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Заголовок и описание поддержки (компактнее) */
+.support-title {
+	font-size: 1rem;
+	margin: 0;
+	color: var(--text);
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.support-desc {
+	font-size: 0.92rem;
+	color: var(--muted);
+	margin: 0;
+}
+
+/* Поддерживающие кнопки — переиспользуем существующие */
+.blog-post .support-actions {
+	/* чуть компактнее в featured */
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 0.25rem;
+	align-items: center;
+}
+
+.support-actions a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+/* На мобильных — кнопки занимают всю ширину по желанию */
+@media (max-width: 640px) {
+	.blog-post .support-actions {
+		gap: 0.5rem;
+	}
+	.blog-post .support-actions .support-btn {
+		flex: 1 1 auto;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,179 @@
+/* SERIES PAGE — minimal, single-column */
+.series-page {
+	padding: 1.5rem 0;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.series-hero {
+	margin-bottom: 1.25rem;
+}
+.series-title {
+	font-family: 'Songer', system-ui;
+	font-size: 1.9rem;
+	margin: 0 0 0.25rem;
+	color: var(--text);
+	font-weight: 700;
+	line-height: 1.04;
+}
+.series-sub {
+	color: var(--muted);
+	margin: 0 0 1rem;
+	max-width: 72ch;
+}
+
+/* List / card */
+.series-list {
+	display: block;
+	gap: 1rem;
+}
+
+.series-card {
+	background: transparent;
+	border-radius: 0.8rem;
+	padding: 1.15rem;
+	margin-bottom: 1rem;
+	border: 1px solid rgba(255, 255, 255, 0.03);
+	transition: box-shadow 0.18s ease, border-color 0.18s ease,
+		transform 0.18s ease;
+}
+.series-card:hover {
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+	transform: translateY(-3px);
+	border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* head row */
+.series-head {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: flex-start;
+	margin-bottom: 0.45rem;
+}
+.series-name {
+	font-size: 1.05rem;
+	margin: 0;
+	color: var(--text);
+	font-weight: 700;
+}
+.series-meta {
+	font-size: 0.9rem;
+	color: var(--muted);
+	margin-top: 0.15rem;
+}
+
+/* compact progress (right side) */
+.series-progress-compact .progress-text {
+	font-weight: 700;
+	color: var(--accent);
+}
+
+/* description */
+.series-desc {
+	margin: 0 0 0.6rem;
+	color: var(--muted);
+	max-width: 68ch;
+}
+
+/* progress bar */
+.series-progress {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	margin-bottom: 0.6rem;
+}
+.progress-bar {
+	flex: 1;
+	height: 8px;
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.02),
+		rgba(255, 255, 255, 0.01)
+	);
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.02);
+	overflow: hidden;
+}
+.progress-fill {
+	height: 100%;
+	background: linear-gradient(90deg, var(--accent), var(--secondary-accent));
+	width: 0%;
+	transition: width 0.6s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+.progress-info {
+	font-size: 0.9rem;
+	color: var(--muted);
+	white-space: nowrap;
+}
+
+/* toggle button */
+.series-toggle {
+	display: inline-block;
+	margin: 0.25rem 0;
+	padding: 0.36rem 0.6rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.02);
+	color: var(--muted);
+	border: 1px solid rgba(255, 255, 255, 0.02);
+	cursor: pointer;
+	font-weight: 600;
+	transition: background 0.12s ease, transform 0.12s ease, color 0.12s ease;
+}
+.series-toggle:hover {
+	transform: translateY(-2px);
+	color: var(--text);
+	background: rgba(255, 255, 255, 0.03);
+}
+
+/* episodes list (initially hidden) */
+.episodes {
+	margin: 0.6rem 0 0 1.1rem;
+	padding: 0;
+	list-style: decimal;
+	color: var(--text);
+}
+.episode {
+	margin: 0.45rem 0;
+	font-size: 0.98rem;
+	display: flex;
+	gap: 0.6rem;
+	align-items: center;
+	justify-content: space-between;
+}
+.episode a {
+	color: var(--accent);
+	text-decoration: none;
+}
+.episode.locked {
+	color: var(--muted);
+	opacity: 0.85;
+}
+.episode.locked span {
+	display: inline-block;
+}
+
+/* small badge for locked */
+.episode.locked::after {
+	content: 'locked';
+	font-size: 0.72rem;
+	color: var(--muted);
+	margin-left: 0.5rem;
+	padding: 0.15rem 0.4rem;
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* responsive */
+@media (max-width: 720px) {
+	.series-page {
+		padding: 1rem;
+	}
+	.series-card {
+		padding: 0.95rem;
+	}
+	.episodes {
+		margin-left: 0.85rem;
+	}
+}

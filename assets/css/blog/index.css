@@ -1,0 +1,7 @@
+@import './sections/blog-section/article-card-tags.css';
+@import './sections/blog-section/article-cards.css';
+@import './sections/blog-section/blog-filters.css';
+@import './sections/blog-section/blog-hero.css';
+@import './sections/news-section/newsletter.css';
+@import './sections/blog-section/support-card.css';
+@import './detail/article.css';
