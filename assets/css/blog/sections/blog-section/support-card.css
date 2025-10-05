@@ -22,6 +22,10 @@
 	box-shadow: none;
 }
 
+.blog-post.featured .support-block {
+	border: 1px solid var(--accent);
+}
+
 /* Meta/label внутри блока поддержки (маленькая строка) */
 .support-meta {
 	display: flex;

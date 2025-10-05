@@ -14,6 +14,13 @@
 			data-translate="metaKeywords"
 		/>
 		<link rel="stylesheet" href="./assets/css/main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/tobiasroeder/lucide-icon-font@main/lucide.css"
+		/>
+
+		<script type="module" src="./assets/js/index.js"></script>
+
 		<!-- <link rel="stylesheet" href="./assets/css2/style.css" /> -->
 		<title data-translate="title">Yaroslav Selyutin - CV</title>
 	</head>
@@ -23,6 +30,7 @@
 			<div class="logo">
 				<a href="/">selyusize</a>
 			</div>
+			<i class="icon-menu"></i>
 			<nav>
 				<ul class="navigation-top">
 					<li>
@@ -37,12 +45,19 @@
 					<li>
 						<a href="./pages/contacts.html">Связь со мной</a>
 					</li>
+					<li>
+						<ul class="login">
+							<li>
+								<button class="filter-btn">
+									<i class="icon-log-in"></i>
+									Войти
+								</button>
+							</li>
+							<li><button class="filter-btn">Зарегистрироваться</button></li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
-			<div class="login">
-				<button class="filter-btn">Войти</button>
-				<button class="filter-btn">Зарегистрироваться</button>
-			</div>
 		</header>
 		<div class="container">
 			<div>
@@ -212,9 +227,7 @@
 							</h2>
 							<div class="project-grid">
 								<div class="project-card">
-									<h3 data-translate="webDeveloperTitle">
-										Web Developer | REDLINE
-									</h3>
+									<h3 data-translate="webDeveloperTitle">Web Developer</h3>
 									<div class="project-meta" data-translate="webDeveloperMeta">
 										Web Studio | May 2025 – August 2025
 									</div>

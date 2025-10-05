@@ -17,7 +17,7 @@
 	display: flex;
 	gap: 0.5rem;
 
-	button:nth-child(2):hover {
+	button:nth-child(2) {
 		border-color: var(--secondary-accent);
 	}
 }

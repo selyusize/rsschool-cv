@@ -23,6 +23,8 @@
 	font-family: inherit;
 	font-size: 0.9rem;
 	font-weight: 500;
+	display: flex;
+	gap: 0.3rem;
 }
 
 .filter-btn:hover {
